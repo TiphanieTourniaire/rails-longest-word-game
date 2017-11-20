@@ -1,0 +1,10 @@
+<h1>Score</h1>
+<p>Your word : <%= params['query'] %></p>
+<p> Your score : <%= @result[:score] %></p>
+<p><%= @result[:message] %></p>
+<p><%= @result[:moyenne] %></p>
+
+<%= link_to "Play again", game_path %>
+
+<p>Number of games : <%= session[:score].length %></p>
+<p>Average : <%= session[:score].reduce(:+) / session[:score].length %></p>

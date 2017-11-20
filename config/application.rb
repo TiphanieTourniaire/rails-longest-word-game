@@ -21,5 +21,7 @@ module RailsLongestWordGame
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    Rails.application.config.session_store :cookie_store, key: 'pages#game', domain: "http://localhost:3000/"
+    ActionDispatch::Session::CookieStore
   end
 end
